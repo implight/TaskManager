@@ -1,6 +1,6 @@
 # TaskManager
 
-1. Установить [ASP.NET Core Runtime 8.0.22](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+1. Установить [ASP.NET Core Runtime 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 2. Установить PostgreSQL (тестировалось на версии 14.8)
 
@@ -32,7 +32,7 @@ dotnet publish -c Release -o ./publish
 
 6. Создать базу данных с указанным именем
 
-7. В папке `\publish` через командную строку выполните (можно задать свой порт) 
+7. В папке `\publish` через командную строку выполнить (можно задать свой порт) 
 ```bash
 dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 ```
