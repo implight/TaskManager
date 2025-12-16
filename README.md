@@ -7,9 +7,12 @@ https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 2. Установить PostgreSQL (тестировалось на версии 14.8)
 
-3. Забрать проект https://github.com/implight/TaskManager.git
+3. Забрать проект
+```bash
+git clone https://github.com/implight/TaskManager.git
+```
 
-4. Перейти в папку `\TaskManager.WebAPI` и через командную строку выполнить 
+5. Перейти в папку `\TaskManager\TaskManager.WebAPI` и через командную строку выполнить 
 ```bash
 dotnet publish -c Release -o ./publish
 ```
