@@ -1,9 +1,6 @@
 # TaskManager
 
-1. Установить ASP.NET Core Runtime 8.0.22
-```bash
-https://dotnet.microsoft.com/en-us/download/dotnet/8.0
-```
+1. Установить [ASP.NET Core Runtime 8.0.22](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 2. Установить PostgreSQL (тестировалось на версии 14.8)
 
