@@ -14,7 +14,7 @@ https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 dotnet publish -c Release -o ./publish
 ```
 
-5. Перейти в папку `\publish` и создать файл vault.json:
+5. Перейти в папку `\publish` и создать файл `vault.json`:
 ```bash
 {
   "Database": {
