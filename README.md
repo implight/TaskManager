@@ -9,12 +9,12 @@ https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 3. Забрать проект https://github.com/implight/TaskManager.git
 
-4. Перейти в папку \TaskManager.WebAPI и через командную строку выполнить 
+4. Перейти в папку `\TaskManager.WebAPI` и через командную строку выполнить 
 ```bash
 dotnet publish -c Release -o ./publish
 ```
 
-5. Перейти в папку \publish и создать файл vault.json:
+5. Перейти в папку `\publish` и создать файл vault.json:
 ```bash
 {
   "Database": {
@@ -34,7 +34,7 @@ dotnet publish -c Release -o ./publish
 
 6. Создать базу данных с указанным именем
 
-7. В папке \publish через командную строку выполните 
+7. В папке `\publish` через командную строку выполните 
 ```bash
 dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 ```
