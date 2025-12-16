@@ -17,7 +17,7 @@ git clone https://github.com/implight/TaskManager.git
 dotnet publish -c Release -o ./publish
 ```
 
-5. Перейти в папку `\publish` и создать файл `vault.json`:
+5. Перейти в папку `\publish` и создать файл `vault.json` с нужными настройками:
 ```bash
 {
   "Database": {
@@ -33,16 +33,12 @@ dotnet publish -c Release -o ./publish
 }
 ```
 
-Настроить параметры соответствующе.
-
 6. Создать базу данных с указанным именем
 
-7. В папке `\publish` через командную строку выполните 
+7. В папке `\publish` через командную строку выполните (можно задать свой порт) 
 ```bash
 dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 ```
-
-Можно задать свой порт.
 
 8. В браузере открыть 
 ```bash
