@@ -42,7 +42,7 @@ dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 http://localhost:5267/swagger/index.html
 ```
 
-9. При тестировании указывать
+9. При тестировании указывать (опционно)
 ```bash
    X-API-Version: 1
 ```
