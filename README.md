@@ -1,5 +1,7 @@
 # TaskManager
 
+## Установка и запуск
+
 1. Установить [ASP.NET Core Runtime 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 2. Установить PostgreSQL (тестировалось на версии 14.8)
@@ -46,3 +48,20 @@ http://localhost:5267/swagger/index.html
 ```bash
    X-API-Version: 1
 ```
+## Архитектура
+
+### Слои
+- **Domain** - Бизнес-логика, сущности, доменные события
+- **Application** - Use cases, CQRS с MediatR, DTOs, валидация
+- **Infrastructure** - Доступ к данным (EF Core + PostgreSQL), кеширование, фоновые сервисы
+- **WebAPI** - Controllers, middleware, authentication, Swagger
+
+### Паттерны
+- Clean Architecture
+- Domain-Driven Design (DDD)
+- CQRS c MediatR
+- Vertical Slice Architecture
+- Repository Pattern
+- Unit of Work
+- Result Pattern
+- Factory Pattern
