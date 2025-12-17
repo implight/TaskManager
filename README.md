@@ -32,7 +32,7 @@ dotnet publish -c Release -o ./publish
 
 6. Создать базу данных с указанным именем
 
-7. В папке `\publish` через командную строку выполнить (можно задать свой порт) 
+7. В папке `\publish` через командную строку выполнить (задать порт) 
 ```bash
 dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 ```
@@ -40,4 +40,9 @@ dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
 8. В браузере открыть 
 ```bash
 http://localhost:5267/swagger/index.html
+```
+
+9. При тестировании указывать
+```bash
+   X-API-Version: 1
 ```
