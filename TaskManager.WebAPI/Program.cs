@@ -19,6 +19,7 @@ namespace TaskManager.WebAPI
             IConfiguration configuration = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
+                .AddJsonFile($"appsettings.{environmentName}.json", optional: true, reloadOnChange: false)
                 .Build();
 
             Log.Logger = new LoggerConfiguration()
@@ -100,8 +101,11 @@ namespace TaskManager.WebAPI
                 .ConfigureAppConfiguration(
                     (context, builder) =>
                     {
+                        var environmentName = context.HostingEnvironment.EnvironmentName;
+
                         builder.SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                             .AddJsonFile($"appsettings.json", optional: false, reloadOnChange: false)
+                            .AddJsonFile($"appsettings.{environmentName}.json", optional: true, reloadOnChange: false)
                             .AddJsonFile($"vault.json", optional: true, reloadOnChange: false);
                     })
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -34,14 +34,14 @@ namespace TaskManager.WebAPI
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment, IServiceProvider serviceProvider)
         {
+			app.UseHttpsRedirection();
+			
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskManager WebAPI v1");
                 options.RoutePrefix = "swagger";
             });
-
-            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
