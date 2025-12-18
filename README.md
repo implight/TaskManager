@@ -34,14 +34,16 @@ dotnet publish -c Release -o ./publish
 
 6. В PostgreSQL создать базу данных с указанным именем
 
-7. В папке `\publish` через командную строку выполнить (задать порт) 
+7. В папке `\publish\appsettings.Production.json` указать нужные порты для Http/Https
+
+8. В папке `\publish` через командную строку выполнить
 ```bash
-dotnet TaskManager.WebAPI.dll --urls "http://localhost:5267"
+dotnet TaskManager.WebAPI.dll
 ```
 
-8. В браузере открыть 
+8. В браузере открыть (указать порт)
 ```bash
-http://localhost:5267/swagger/index.html
+http://localhost:5005/swagger/index.html
 ```
 
 9. При тестировании указывать (опционно)
